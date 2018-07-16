@@ -18,7 +18,11 @@ app.use(views(path.resolve(__dirname,'views'), {
 async function showPage(pagename, data, ctx) {
   await ctx.render(pagename,data);
 }
-router.get('/a', showPage.bind(this,'a',{newLocation:'http://localhost:3000/b'}));
+router.get('/a', showPage.bind(this,'a',{
+}));
+router.get('/c', ctx => {
+   ctx.body='';
+});
 app.use(router.routes());
 
 app.listen(3000, () => {

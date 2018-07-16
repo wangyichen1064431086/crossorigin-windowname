@@ -9,11 +9,19 @@
 </head>
 <body>
 <div>我是a</div>
+<iframe style="display: none;" id="dataSource" src='http://sub.localhost:3001/b'></iframe>
 <script>
-  window.name = '页面a';
-  setTimeout(function() {
-    window.location = '{{newLocation}}';
-  }, 5000);
+  const dataSourceIframe = document.getElementById('dataSource');
+  dataSourceIframe.onload = function() {
+    dataSourceIframe.onload = function() {
+      const data = dataSourceIframe.contentWindow.name;
+      console.log(data);
+    }
+    dataSourceIframe.src = '/c';
+  }
 </script>
+
+
+
 </body>
 </html>
