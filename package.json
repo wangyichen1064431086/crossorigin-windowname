@@ -1,0 +1,30 @@
+{
+  "name": "crossorigin-windowname",
+  "version": "1.0.0",
+  "description": "Test the cross origin by using window.name.",
+  "main": "server-for-sameorigin.js",
+  "scripts": {
+    "start:sameoriginserver": "node server-for-sameorigin.js",
+    "start:crossoriginserver-a":"node server-for-crossorigin-a.js",
+    "start:crossoriginserver-b":"node server-for-crossorigin-b.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyichen1064431086/crossorigin-windowname.git"
+  },
+  "author": "wangyichen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangyichen1064431086/crossorigin-windowname/issues"
+  },
+  "homepage": "https://github.com/wangyichen1064431086/crossorigin-windowname#readme",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-subdomain": "^2.1.0",
+    "koa-views": "^6.1.4",
+    "nunjucks": "^3.1.3"
+  }
+}
